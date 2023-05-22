@@ -1,0 +1,26 @@
+<br>
+<p><h1 align="center">Permanent Data Search Result</h1></p>
+<p align="center">{{title2}}</p>
+<br>
+<div class="container">
+    <div class="row" style="padding:50px;">
+        <div>
+            <table id='empTable' class='display dataTable' width='100%'>
+                <thead>
+                <tr>
+                    <th>Instructor ID</th>
+                    <th>Hourly Wage</th>
+                </tr>
+                </thead>
+                <tbody align="center"> 
+                    {% for row in value %}  
+                        <tr> 
+                            <td>{{row[0]}}</td>
+                            <td>{{row[1]}}</td>
+                        </tr> 
+                    {% endfor %} 
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Instructor Table - University Database</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+				<!-- Header -->
+					<header id="header">
+						<h1>Instructor Table</h1>
+                            <p>Please specify the filters below:</p>
+							<span style="float:left;">
+								<p style="color: #000;">Condition: Last Name OR Born Before Year</p>
+								<form action="/instructorquery1" method="POST">
+									<p>Last Name: </p>
+									<p><input type="text" style="background-color:rgb(0, 0, 0);" name="lname" placeholder="Mendatory"/></p>
+									<p>Born Before Year: </p>
+									<p><input type="text" style="background-color:rgb(0, 0, 0);" name="dob" placeholder="Mendatory"/></p>
+									<p><input type="submit" style="background-color:rgb(0, 0, 0);" value="submit"></p>
+								</form>
+							</span>	
+
+							<span style="float:right;">
+								<p style="color: #000;">Condition: Born between YEAR AND Year</p>
+								<form action="/instructorquery2" method="POST">
+									<p>Born After Year: </p>
+									<p><input type="text" style="background-color:rgb(0, 0, 0);" name="year1" placeholder="Mendatory"/></p>
+									<p>Born Before Year: </p>
+									<p><input type="text" style="background-color:rgb(0, 0, 0);" name="year2" placeholder="Mendatory"/></p>
+									<p><input type="submit" style="background-color:rgb(0, 0, 0);" value="submit"></p>
+								</form>
+							</span>
+                        
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Shahrukh Sohail - <a href="https://www.linkedin.com/in/shahrukhsohail/">SRK</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>

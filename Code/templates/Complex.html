@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Complex Queries - University Database</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/main.css" />
+		<noscript><link rel="stylesheet" href="static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+				<!-- Header -->
+					<header id="header">
+						<h1>University Database</h1>
+                            <p>Please specify the filters below:</p>
+							<span style="float:left;">
+								<p style="color: #000;">Condition: Credits more than AND Building</p>
+								<form action="/complexquery1" method="POST">
+									<p>Minimum Credits: </p>
+									<p><input type="text" style="background-color:rgb(0, 0, 0);" name="credits" placeholder="Mendatory"/></p>
+									<p>Building: </p>
+									<p><input type="text" style="background-color:rgb(0, 0, 0);" name="buildname" placeholder="Mendatory"/></p>
+									<p><input type="submit" style="background-color:rgb(0, 0, 0);" value="submit"></p>
+								</form>
+							</span>	
+
+							<span style="float:right;">
+								<p style="color: #000;">Condition: MAX/MIN department Credits</p>
+								<form action="/complexquery2" method="POST">
+									<p>MAX/MIN: </p>
+									<p><input type="text" style="background-color:rgb(0, 0, 0);" name="credits" placeholder="max/min"/></p>
+									<p><input type="submit" style="background-color:rgb(0, 0, 0);" value="submit"></p>
+								</form>
+							</span>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; Shahrukh Sohail - <a href="https://www.linkedin.com/in/shahrukhsohail/">SRK</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.classList.remove('is-preload'); }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+	</body>
+</html>
